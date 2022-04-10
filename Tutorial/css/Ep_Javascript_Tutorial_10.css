@@ -1,0 +1,15 @@
+
+.new-class{
+    color: rgb(75, 75, 82);
+    background-color: rgb(200, 223, 175);
+}
+
+.light{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.dark{
+    background-color: black;
+    color: white;
+}

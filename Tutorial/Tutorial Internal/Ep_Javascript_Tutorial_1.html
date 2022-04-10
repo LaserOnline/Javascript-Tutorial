@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+<body>
+    <table border="2px" id="table">
+        <tr>
+            <td>
+                <h1>
+                    0
+                </h1>
+            </td>
+            <td>
+                <button onclick="add(this)">+</button>
+            </td>
+            <td>
+                <button onclick="del(this)">-</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function add(e){
+            tr = e.parentNode.parentNode.innerHTML; 
+            table = document.getElementById("table");
+            next_index = table.rows.length;
+            new_tr = table.insertRow(next_index);
+            new_tr.innerHTML = tr;
+            new_tr.children[0].children[0].innerHTML = next_index;
+            alert(e.parentNode.innerHTML);
+        }
+        function del(e){
+            table = document.getElementById("table");
+            if (table.rows.length == 1){
+                alert(table.rows.length);
+                return
+            }
+            e.parentNode.parentNode.remove();
+            alert(table.rows.length);
+        }
+    </script>
+</body>
+</html>
